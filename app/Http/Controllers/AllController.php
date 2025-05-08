@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Beranda;
-use App\Models\Blog;
-use App\Models\CaraOrder;
-use App\Models\Faq;
+use App\Models\Berita;
 use App\Models\Foto;
-use App\Models\Harga;
 use App\Models\Info;
 use App\Models\Keunggulan;
 use App\Models\Kontak;
@@ -31,11 +27,8 @@ class AllController extends Controller
             $manfaat = Manfaat::get()->isEmpty() ? null : Manfaat::get();
             $keunggulan = Keunggulan::get()->isEmpty() ? null : Keunggulan::get();
             $tentang_kami = TentangKami::first() ?? null;
-            $harga = Harga::take(3)->get()->isEmpty() ? null : Harga::take(3)->get();
             $syarat_ketentuan = SyaratKetentuan::get()->isEmpty() ? null : SyaratKetentuan::get();
             $media_partner = MediaPartner::get()->isEmpty() ? null : MediaPartner::get();
-            $cara_order = CaraOrder::get()->isEmpty() ? null : CaraOrder::get();
-            $faq = Faq::get()->isEmpty() ? null : Faq::get();
             $layanan = Layanan::get()->isEmpty() ? null : Layanan::get();
             $kontak = Kontak::get()->isEmpty() ? null : Kontak::get();
             return response()->json(['id' => '1', 'data' => [
@@ -45,11 +38,8 @@ class AllController extends Controller
                 'manfaat' => $manfaat,
                 'keunggulan' => $keunggulan,
                 'tentang_kami' => $tentang_kami,
-                'harga' => $harga,
                 'syarat_ketentuan' => $syarat_ketentuan,
                 'media_partner' => $media_partner,
-                'cara_order' => $cara_order,
-                'faq' => $faq,
                 'layanan' => $layanan,
                 'kontak' => $kontak,
             ]]);
@@ -62,12 +52,10 @@ class AllController extends Controller
     {
         try {
             $tentang_kami = TentangKami::first() ?? null;
-            $faq = Faq::get()->isEmpty() ? null : Faq::get();
             $layanan = Layanan::get()->isEmpty() ? null : Layanan::get();
             $kontak = Kontak::get()->isEmpty() ? null : Kontak::get();
             return response()->json(['id' => '1', 'data' => [
                 'tentang_kami' => $tentang_kami,
-                'faq' => $faq,
                 'layanan' => $layanan,
                 'kontak' => $kontak,
             ]]);
@@ -92,16 +80,14 @@ class AllController extends Controller
         }
     }
 
-    public function paket()
+    public function berita()
     {
         try {
-            $paket = Harga::get()->isEmpty() ? null : Harga::get();
-            $syarat_ketentuan = SyaratKetentuan::get()->isEmpty() ? null : SyaratKetentuan::get();
+            $berita = Berita::get()->isEmpty() ? null : Berita::get();
             $layanan = Layanan::get()->isEmpty() ? null : Layanan::get();
             $kontak = Kontak::get()->isEmpty() ? null : Kontak::get();
             return response()->json(['id' => '1', 'data' => [
-                'paket' => $paket,
-                'syarat_ketentuan' => $syarat_ketentuan,
+                'berita' => $berita,
                 'layanan' => $layanan,
                 'kontak' => $kontak,
             ]]);
@@ -110,47 +96,29 @@ class AllController extends Controller
         }
     }
 
-    public function blog()
+    public function detailBerita($id)
     {
         try {
-            $blog = Blog::get()->isEmpty() ? null : Blog::get();
-            $layanan = Layanan::get()->isEmpty() ? null : Layanan::get();
-            $kontak = Kontak::get()->isEmpty() ? null : Kontak::get();
-            return response()->json(['id' => '1', 'data' => [
-                'blog' => $blog,
-                'layanan' => $layanan,
-                'kontak' => $kontak,
-            ]]);
-        } catch (\Throwable $th) {
-            return response()->json(['id' => '0', 'data' => $th->getMessage()]);
-        }
-    }
+            $berita = Berita::find($id);
 
-    public function detailBlog($id)
-    {
-        try {
-            // Fetch the blog by ID or return null if not found
-            $blog = Blog::find($id);
+            $berita->jumlah_lihat += 1;
+            $berita->save();
 
-            // Fetch the latest 3 blogs, or return an empty collection if none exist
-            $latest_blog = Blog::latest()->take(3)->get();
+            $latest_berita = Berita::latest()->take(3)->get();
 
-            // Fetch all Layanan and Kontak data, or return an empty collection if none exist
             $layanan = Layanan::all();
             $kontak = Kontak::all();
 
-            // Prepare response data
             return response()->json([
                 'id' => '1',
                 'data' => [
-                    'blog' => $blog,
-                    'latest_blog' => $latest_blog->isEmpty() ? null : $latest_blog,
+                    'berita' => $berita,
+                    'latest_berita' => $latest_berita->isEmpty() ? null : $latest_berita,
                     'layanan' => $layanan->isEmpty() ? null : $layanan,
                     'kontak' => $kontak->isEmpty() ? null : $kontak,
                 ],
             ]);
         } catch (\Throwable $th) {
-            // Return error message if an exception occurs
             return response()->json([
                 'id' => '0',
                 'data' => $th->getMessage(),

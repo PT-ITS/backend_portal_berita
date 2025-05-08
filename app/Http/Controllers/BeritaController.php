@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
+use App\Models\Berita;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class BlogController extends Controller
+class BeritaController extends Controller
 {
 
     public function list()
     {
         try {
-            $data = Blog::get();
+            $data = Berita::get();
             return response()->json(['id' => '1', 'data' => $data]);
         } catch (\Throwable $th) {
             return response()->json(['id' => '0', 'data' => $th->getMessage()]);
@@ -33,7 +33,7 @@ class BlogController extends Controller
             // Upload the foto
             $fotoPath = $request->file('foto')->store('fotos', 'public');
 
-            $data = Blog::create([
+            $data = Berita::create([
                 'foto' => $fotoPath,
                 'header' => $validatedData['header'],
                 'tanggal' => $validatedData['tanggal'],
@@ -58,7 +58,7 @@ class BlogController extends Controller
                 'isi' => 'required',
             ]);
 
-            $data = Blog::find($id);
+            $data = Berita::find($id);
             if (!$data) {
                 return response()->json(['id' => '0', 'data' => 'Data Tidak Ditemukan']);
             }
@@ -87,7 +87,7 @@ class BlogController extends Controller
     public function delete($id)
     {
         try {
-            $data = Blog::find($id);
+            $data = Berita::find($id);
             if ($data) {
                 // Delete the foto from storage
                 if ($data->foto && Storage::disk('public')->exists($data->foto)) {

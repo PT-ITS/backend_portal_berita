@@ -13,6 +13,5 @@ class Foto extends Model
         'foto_home',
         'foto_info',
         'foto_manfaat',
-        'foto_order',
     ];
 }

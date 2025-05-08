@@ -18,7 +18,6 @@ class CreateFotosTable extends Migration
             $table->string('foto_home');
             $table->string('foto_info');
             $table->string('foto_manfaat');
-            $table->string('foto_order');
             $table->timestamps();
         });
     }

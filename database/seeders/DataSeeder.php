@@ -2,10 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Beranda;
-use App\Models\CaraOrder;
-use App\Models\Faq;
-use App\Models\Harga;
 use App\Models\Info;
 use App\Models\Keunggulan;
 use App\Models\Kontak;
@@ -22,14 +18,6 @@ class DataSeeder extends Seeder
 {
     public function run()
     {
-        // Beranda
-        // Beranda::create([
-        //     'header' => 'Jasa Press Release Murah',
-        //     'isi' => '<p>Tingkatkan reputasi bisnis kamu dengan Jasa Press Release Murah dari kami! Dapatkan kesempatan untuk melakukan publikasi media online secara masif yang akan membantu meningkatkan brand awareness kamu.</p>',
-        //     'footer' => 'Garansi 100% Berita Tayang',
-        //     'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-        //     'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        // ]);
 
         // Info
         Info::create([
@@ -99,8 +87,8 @@ class DataSeeder extends Seeder
 
         // Tentang Kami
         TentangKami::create([
-            'header' => 'Tentang Kyu Media',
-            'isi' => '<p>Kyu Media merupakan perusahaan media agensi yang melayani strategi pengelolaan konten artikel dan audio visual untuk mendorong pertumbuhan bisnis melalui pengelolaan media sosial, optimasi SEO, backlink media nasional, pembuatan website, media monitoring, strategi media, dan layanan konten berkualitas.</p>',
+            'header' => 'Tentang Ansor News',
+            'isi' => '<p>Ansor News merupakan perusahaan media agensi yang melayani strategi pengelolaan konten artikel dan audio visual untuk mendorong pertumbuhan bisnis melalui pengelolaan media sosial, optimasi SEO, backlink media nasional, pembuatan website, media monitoring, strategi media, dan layanan konten berkualitas.</p>',
             'visi' => '<p>Menjadi digital agency terkemuka yang membantu bisnis berkembang melalui solusi digital inovatif dan berbasis hasil.</p>',
             'misi' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Memberikan solusi pemasaran digital yang efektif dan terukur untuk setiap klien.</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Menggabungkan teknologi terbaru dengan kreativitas untuk menghasilkan kampanye yang berdampak.</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Meningkatkan pengalaman digital pelanggan klien untuk mendorong pertumbuhan dan loyalitas.</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Membangun hubungan jangka panjang dengan klien melalui transparansi, komunikasi yang efektif, dan hasil yang nyata.</li></ol>',
             'nilai_perusahaan' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Kreativitas &amp; Inovasi: Mengutamakan ide-ide segar dan inovasi dalam setiap proyek digital.</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Orientasi Hasil: Berfokus pada pencapaian tujuan bisnis klien melalui strategi yang tepat dan data-driven.</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Kolaborasi &amp; Transparansi: Menjaga komunikasi terbuka dan bekerja sama dengan klien sebagai mitra untuk mencapai kesuksesan bersama.</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Adaptabilitas: Selalu tanggap terhadap tren digital terbaru dan kebutuhan pasar yang dinamis.</li></ol>',
@@ -108,92 +96,6 @@ class DataSeeder extends Seeder
             'happy_client' => '12K',
             'awards_winning' => '49+',
             'success_rate' => '98%',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-
-        // Harga
-        Harga::create([
-            'nama_paket' => 'Starter A',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>5 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Kelas A</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '4.000.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Reguler A',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>10 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Kelas A</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '8.000.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Premium A',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>15 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Kelas A</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '10.000.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Advance A',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>20 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Kelas A</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '15.000.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Starter B',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>5 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Kelas B</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '3.500.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Reguler B',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>10 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Kelas B</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '6.500.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Premium B',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>15 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Kelas B</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '8.500.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Advance B',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>20 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Kelas B</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '12.500.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Premium Daerah',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>10 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Daerah</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '4.500.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Advance Daerah',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>15 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Daerah</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '7.500.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Premium Woman',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>10 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Daerah</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '8.500.000',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Harga::create([
-            'nama_paket' => 'Advance Woman',
-            'isi_paket' => '<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>20 Media</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bebas Pilih Media Daerah</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Gratis Pembuatan 1 Artikel</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Terbit Ulang Berita</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Berita Terbit Permanen</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Bonus Tambahan 200ribu</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Jaminan 99% Terbit</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Garansi Ganti Media</li></ol>',
-            'harga' => '17.000.000',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
@@ -258,25 +160,25 @@ class DataSeeder extends Seeder
         // Syarat dan Ketentuan 2
         SyaratKetentuan2::create([
             'header' => 'Pastikan Membaca Syarat dan Ketentuan Layanan',
-            'isi' => '<p>Dengan menggunakan layanan Jasa Press Release Murah di kyumedia.com artinya klien MENYETUJUI dengan Syarat dan Ketentuan yang berlaku pada halaman ini.</p>',
+            'isi' => '<p>Dengan menggunakan layanan Jasa Press Release Murah di ansornews.com artinya klien MENYETUJUI dengan Syarat dan Ketentuan yang berlaku pada halaman ini.</p>',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
         SyaratKetentuan2::create([
             'header' => 'Poin 1: Order Layanan',
-            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pemesanan Layanan yang ada di Kyu Media bisa langsung menghubungi kontak WhatsApp kami.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Klien diwajibkan mengisi data yang diperlukan agar pesanan dapat diproses.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Tim Kyu Media akan segera membalas pesan atau menghubungi klien pada jam kerja</li></ol>',
+            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pemesanan Layanan yang ada di Ansor News bisa langsung menghubungi kontak WhatsApp kami.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Klien diwajibkan mengisi data yang diperlukan agar pesanan dapat diproses.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Tim Ansor News akan segera membalas pesan atau menghubungi klien pada jam kerja</li></ol>',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
         SyaratKetentuan2::create([
             'header' => 'Poin 2: Bahan Konten (Press Release dan Backlink Media Nasional)',
-            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Diperbolehkan bagi klien telah memberi draft press release yang ditulis sendiri. Namun, apabila klien ingin dibuatkan draft press release, kami akan menulis sesuai brief dan persetujuan sebelumnya.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Penting untuk diperhatikan, apabila draft press release belum sesuai kriteria media, maka Tim Kyu Media akan melakukan penyuntingan tanpa menghilangkan substansi konten, karena setiap media berbeda di setiap konten.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Jika klien belum memiliki draft artikel, Tim Kyu Media dapat membantu membuatkan konten release dengan penambahan biaya.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Untuk diketahui, seluruh draft artikel wajib disetujui klien sebelum Tim mengirimkan ke meja redaksi.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Perlu diketahui pula bahwa, draft artikel yang kami kirimkan ke redaksi yang bersangkutan sifatnya rekomendasi. Jadi, jika terjadi perubahan pada saat tayang, maka itu sudah menjadi kebijakan media. </li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Perubahan setelah tayang / terbit hanya dapat dilakukan ketika keluar dari substansi konten seperti keliru pada penyebutan nama, Alamat, nama brand perusahaan, kekeliruan penulisan gelar akademik, hingga salah ketik (typo).</li></ol>',
+            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Diperbolehkan bagi klien telah memberi draft press release yang ditulis sendiri. Namun, apabila klien ingin dibuatkan draft press release, kami akan menulis sesuai brief dan persetujuan sebelumnya.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Penting untuk diperhatikan, apabila draft press release belum sesuai kriteria media, maka Tim Ansor News akan melakukan penyuntingan tanpa menghilangkan substansi konten, karena setiap media berbeda di setiap konten.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Jika klien belum memiliki draft artikel, Tim Ansor News dapat membantu membuatkan konten release dengan penambahan biaya.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Untuk diketahui, seluruh draft artikel wajib disetujui klien sebelum Tim mengirimkan ke meja redaksi.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Perlu diketahui pula bahwa, draft artikel yang kami kirimkan ke redaksi yang bersangkutan sifatnya rekomendasi. Jadi, jika terjadi perubahan pada saat tayang, maka itu sudah menjadi kebijakan media. </li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Perubahan setelah tayang / terbit hanya dapat dilakukan ketika keluar dari substansi konten seperti keliru pada penyebutan nama, Alamat, nama brand perusahaan, kekeliruan penulisan gelar akademik, hingga salah ketik (typo).</li></ol>',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
         SyaratKetentuan2::create([
             'header' => 'Poin 3: Pembayaran',
-            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Adapun pembayaran layanan jasa press release murah dapat dilakukan setelah Tim Kyu Media kami mengirimkan nota penagihan (invoice).</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Berikutnya, klien dapat melakukan pembayaran pada nomor rekening yang tertera pada invoice.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pembayaran dilakukan 100% di awal untuk kerja sama yang tidak bersifat kontrak</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Apabila Klien telah membayar, klien wajib memberikan bukti transfer melalui kontak WhatsApp Kyu Media.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Kyu Media tidak menerima pembayaran dengan sistem down payment (DP) untuk pembelian press release satuan.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Kyu Media menerima pembayaran sistem termin untuk penggunaan layanan yang bersifat kontrak.</li></ol>',
+            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Adapun pembayaran layanan jasa press release murah dapat dilakukan setelah Tim Ansor News kami mengirimkan nota penagihan (invoice).</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Berikutnya, klien dapat melakukan pembayaran pada nomor rekening yang tertera pada invoice.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pembayaran dilakukan 100% di awal untuk kerja sama yang tidak bersifat kontrak</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Apabila Klien telah membayar, klien wajib memberikan bukti transfer melalui kontak WhatsApp Ansor News.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Ansor News tidak menerima pembayaran dengan sistem down payment (DP) untuk pembelian press release satuan.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Ansor News menerima pembayaran sistem termin untuk penggunaan layanan yang bersifat kontrak.</li></ol>',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
@@ -294,7 +196,7 @@ class DataSeeder extends Seeder
         ]);
         SyaratKetentuan2::create([
             'header' => 'Poin 6: Sifat Press Release',
-            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Layanan press release di Kyu Media sifatnya publikasi dengan gaya pemberitaan ke media online, bukan promosi maupun hal-hal yang bersifat penjualan.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Peran Kyu Media menjembatani antara klien dengan media online, sehingga gaya, karakter dan kebijakan konten menjadi hak media online tersebut sepenuhnya.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Apabila konten press release yang dikirimkan oleh klien dirasa kurang sesuai dengan gaya dan karakter media yang dipilih, redaksi berhak untuk merevisi dan mengubahnya sesuai kebijakan media yang berlaku.</li></ol>',
+            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Layanan press release di Ansor News sifatnya publikasi dengan gaya pemberitaan ke media online, bukan promosi maupun hal-hal yang bersifat penjualan.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Peran Ansor News menjembatani antara klien dengan media online, sehingga gaya, karakter dan kebijakan konten menjadi hak media online tersebut sepenuhnya.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Apabila konten press release yang dikirimkan oleh klien dirasa kurang sesuai dengan gaya dan karakter media yang dipilih, redaksi berhak untuk merevisi dan mengubahnya sesuai kebijakan media yang berlaku.</li></ol>',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
@@ -312,83 +214,13 @@ class DataSeeder extends Seeder
         ]);
         SyaratKetentuan2::create([
             'header' => 'Poin 9: Gagal Terbit',
-            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Jika terjadi hal-hal yang mengakibatkan konten tidak jadi tayang, maka klien berhak mengajukan <strong>Pengembalian Dana</strong> atau <strong>Mengganti Media</strong> untuk Menerbitkan Konten</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pengajuan pengembalian dana akibat gagal terbit paling lambat 3×24 jam setelah redaksi memverifikasi kepada Tim Kyu Media.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pengajuan perubahan media akibat gagal terbit paling lambat 3×24 jam setelah redaksi memverifikasi kepada tim.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pengembalian dana lantaran pembatalan order akan dipotong 25% untuk semua layanan yang dipilih.</li></ol>',
+            'isi' => '<ol><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Jika terjadi hal-hal yang mengakibatkan konten tidak jadi tayang, maka klien berhak mengajukan <strong>Pengembalian Dana</strong> atau <strong>Mengganti Media</strong> untuk Menerbitkan Konten</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pengajuan pengembalian dana akibat gagal terbit paling lambat 3×24 jam setelah redaksi memverifikasi kepada Tim Ansor News.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pengajuan perubahan media akibat gagal terbit paling lambat 3×24 jam setelah redaksi memverifikasi kepada tim.</li><li data-list="ordered"><span class="ql-ui" contenteditable="false"></span>Pengembalian dana lantaran pembatalan order akan dipotong 25% untuk semua layanan yang dipilih.</li></ol>',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
         SyaratKetentuan2::create([
             'header' => 'Perubahan Syarat dan Ketentuan Layanan',
-            'isi' => '<p>Syarat dan Ketentuan layanan ini dapat berubah sewaktu waktu, menyesuaikan dengan kondisi yang ada. Setiap perubahan Syarat dan Ketentuan tidak akan disampaikan kepada pembaca maupun pelanggan secara langsung.</p><p>Syarat dan Ketentuan layanan jasa press release kami dibangun untuk melindungi Anda. Maka dari itu, sebaiknya pahami betul Syarat dan Ketentuan agar Anda dapat memanfaatkan layanan Kyu Media secara maksimal.</p><p>Kyu Media menawarkan solusi efektif untuk meningkatkan visibilitas dan reputasi suatu merek. Dengan Syarat dan Ketentuan yang berlaku, kami memastikan setiap rilis berita yang kami buat disesuaikan dengan kebutuhan guna menjangkau audiens yang tepat, dan mematuhi standar industri.</p><p>Syarat dan Ketentuan layanan Kyu Media.com ini berlaku sejak pada 1 Oktober 2024.</p><p>Informasi selengkapnya bisa melalui Whatsapp : 085774548930</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-
-        // Cara Order
-        CaraOrder::create([
-            'header' => '1. Konsultasi',
-            'isi' => '<p>Konsultasikan kebutuhan Anda agar kami dapat memberikan layanan yang tepat sesuai dengan anggaran Anda.</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        CaraOrder::create([
-            'header' => '2. Pengiriman Invoice',
-            'isi' => '<p>Anda akan menerima invoice dari tim Kyu Media.</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        CaraOrder::create([
-            'header' => '3. Pembayaran',
-            'isi' => '<p>Lakukan pembayaran sesuai layanan yang disepakati dalam waktu 1x24 jam setelah invoice dikirimkan.</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        CaraOrder::create([
-            'header' => '4. Proses Pengerjaan',
-            'isi' => '<p>Setelah pembayaran diterima oleh bagian keuangan kami, layanan yang Anda pilih akan mulai dikerjakan sehari setelahnya.</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-
-        // FAQ
-        Faq::create([
-            'pertanyaan' => 'Mengapa memilih Jasa Press Release Murah dari Kami?',
-            'jawaban' => '<p>Kami berpengalaman dalam penerbitan artikel, khususnya press release untuk perusahaan dan individu.</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Faq::create([
-            'pertanyaan' => 'Siapa yang Membutuhkan Jasa Press Release?',
-            'jawaban' => '<p>1. Perusahaan</p><p>Menyiarkan kegiatan perusahaan, perubahan struktur organisasi, menanggapi krisis, meningkatkan reputasi.</p><p><br></p><p>2. Startup</p><p>Meningkatkan visibilitas agar masyarakat luas mengetahui keberadaan startup di pasar Indonesia.</p><p><br></p><p>3. UMKM (Usaha Mikro, Kecil, dan Menengah)</p><p>Membangun dan meningkatkan kesadaran di tingkat lokal, menyiarkan produk, merespons perubahan signifikan dalam bisnis.</p><p><br></p><p>4. Pemerintah / BUMN</p><p>Menyiarkan berita tentang kebijakan dan program pemerintah atau BUMN agar diketahui masyarakat luas.</p><p><br></p><p>5. Influencer</p><p>Meningkatkan engagement, memperoleh popularitas, dan meningkatkan peluang untuk verifikasi centang biru di media sosial.</p><p><br></p><p>6. Artis/Seniman</p><p>Memperkenalkan karya terbaru, penampilan di acara besar, dan proyek yang sedang dikerjakan.</p><p><br></p><p>7. Tokoh Masyarakat</p><p>Berbagi pesan atau informasi yang dianggap penting untuk masyarakat.</p><p><br></p><p>8. Organisasi Nirlaba</p><p>Meningkatkan dukungan dan kesadaran masyarakat tentang kegiatan amal dan kampanye sosial yang sedang dijalankan.</p><p><br></p><p>9. Event Organizer</p><p>Memasarkan acara untuk meningkatkan partisipasi dan eksposur event.</p><p><br></p><p>10. Profesional dan Ahli</p><p>Membangun reputasi profesional dengan mengumumkan keberhasilan atau memberikan pandangan ahli melalui media nasional.</p><p><br></p><p>11. Lembaga Pendidikan</p><p>Sekolah, universitas, lembaga pelatihan, yang ingin menyampaikan informasi terkait program pendidikan dan prestasi mereka.</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Faq::create([
-            'pertanyaan' => 'Berapa Hari Artikel Press Release Terbit?',
-            'jawaban' => '<p>Proses tayang press release memerlukan waktu 3x24 jam tanpa pengerjaan artikel. Bahkan, bisa lebih cepat dari waktu tersebut.</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Faq::create([
-            'pertanyaan' => 'Apakah Artikel Press Release Tayang Permanen?',
-            'jawaban' => '<p>Selama konten press release tidak melanggar kebijakan media, artikel press release akan tetap tayang di media yang bersangkutan.</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Faq::create([
-            'pertanyaan' => 'Bisa Sebar Rilis di Media Online Mana Saja?',
-            'jawaban' => '<p>Kami dapat menyebarkan press release klien ke berbagai media online nasional, lokal, atau daerah, hingga media non-tier yang sudah terindeks di Google.</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Faq::create([
-            'pertanyaan' => 'Topik Apa Saja yang Diperbolehkan untuk Press Release?',
-            'jawaban' => '<p>Kami menerima semua topik, kecuali:</p><p>1. Judi</p><p>2. Porno</p><p>3. Ujaran Kebencian</p><p>4. Provokasi</p><p>5. Perbandingan Agama</p><p>6. Organisasi Ilegal</p><p>7. Obat dan Makanan yang belum resmi</p>',
-            'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
-            'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
-        ]);
-        Faq::create([
-            'pertanyaan' => 'Bagaimana Sistem Pembayaran Jasa Press Release?',
-            'jawaban' => '<p>Pengguna layanan dapat melakukan pembayaran penuh di awal atau memberikan uang muka sebesar 50% (syarat dan ketentuan berlaku).</p>',
+            'isi' => '<p>Syarat dan Ketentuan layanan ini dapat berubah sewaktu waktu, menyesuaikan dengan kondisi yang ada. Setiap perubahan Syarat dan Ketentuan tidak akan disampaikan kepada pembaca maupun pelanggan secara langsung.</p><p>Syarat dan Ketentuan layanan jasa press release kami dibangun untuk melindungi Anda. Maka dari itu, sebaiknya pahami betul Syarat dan Ketentuan agar Anda dapat memanfaatkan layanan Ansor News secara maksimal.</p><p>Ansor News menawarkan solusi efektif untuk meningkatkan visibilitas dan reputasi suatu merek. Dengan Syarat dan Ketentuan yang berlaku, kami memastikan setiap rilis berita yang kami buat disesuaikan dengan kebutuhan guna menjangkau audiens yang tepat, dan mematuhi standar industri.</p><p>Syarat dan Ketentuan layanan Ansor News.com ini berlaku sejak pada 1 Oktober 2024.</p><p>Informasi selengkapnya bisa melalui Whatsapp : 085774548930</p>',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
@@ -432,7 +264,7 @@ class DataSeeder extends Seeder
 
         // Kontak
         Kontak::create([
-            'kontak' => '085774548930',
+            'kontak' => '081',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
@@ -442,12 +274,12 @@ class DataSeeder extends Seeder
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
         Kontak::create([
-            'kontak' => 'kyumedia@gmail.com',
+            'kontak' => 'ansornews@gmail.com',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);
         Kontak::create([
-            'kontak' => 'kyumedia.com',
+            'kontak' => 'ansornews.com',
             'created_at' => Carbon::create(2024, 12, 3, 12, 0, 0), // Format: (year, month, day, hour, minute, second)
             'updated_at' => Carbon::create(2024, 12, 3, 12, 0, 0) // Format: (year, month, day, hour, minute, second)
         ]);

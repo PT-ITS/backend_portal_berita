@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Berita extends Model
 {
     use HasFactory;
 
@@ -15,5 +15,6 @@ class Blog extends Model
         'tanggal',
         'kategori',
         'isi',
+        'jumlah_lihat'
     ];
 }
